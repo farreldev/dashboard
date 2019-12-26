@@ -1,0 +1,79 @@
+a.btn,
+button.btn,
+input[type='button'].btn,
+input[type='submit'].btn {
+	position: relative;
+	display: inline-block;
+	padding: 9px 15px;
+	font-family: $font1;
+	font-size: 15px;
+	line-height: initial;
+	// font-weight: 500;
+	color: $color-light;
+	letter-spacing: .3px;
+	text-decoration: none;
+	text-shadow: 0 1px 1px rgba(0,0,0,.055);
+	outline: none;
+	cursor: pointer;
+	// background: #f2f2f2;
+	// border: 2px solid $color-light;
+	border-width: 2px;
+	border-style: solid;
+	border-color: transparent;
+	// border-radius: 50px;
+	// border-radius: 3px;
+	// border-radius: 100px;
+	vertical-align: middle;
+	// &.btn-green-blue {
+	// 	background-color: $color-green-blue;
+	// 	&:hover {
+	// 		background-color: darken($color-green-blue, 10%);
+	// 	}
+	// }
+	&.btn-green {
+		background-color: $color-green;
+		&:hover {
+			background-color: darken($color-green, 10%);
+		}
+	}
+	&.fd-line-orange {
+		@extend .fd-line-orange;
+		border-width: 1px;
+		background-color: $color-light;
+		color: $color-orange;
+		&:hover {
+			background-color: $color-orange;
+			color: $color-light;
+		}
+	}
+}
+
+@keyframes like {
+	to {
+		fill: $color-orange;
+	}
+}
+
+@keyframes press {
+	0% { transform: scale(1) }
+	50% { transform: scale(1.2) }
+	100% { transform: scale(1) }
+}
+
+%iconPos {
+	position: absolute;
+	line-height: 1.35;
+}
+	
+%iconMoveRight {
+	opacity: 0;
+	transform-origin: left center;
+	transform: translateX(0px);
+	transition: all .3s ease-in-out;
+}
+%iconMoveLeft {
+	opacity: 0;
+	transform-origin: right center;
+	transform: translateX(0px);
+	transition: all .3s ease-in-out;
+}

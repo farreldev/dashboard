@@ -1,0 +1,22 @@
+a.fs {
+	&.maximize {
+		svg {
+			&:nth-child(1) {
+				display: none;
+			}
+			&:nth-child(2) {
+				display: block;
+			}
+		}
+	}
+	&.restore {
+		svg {
+			&:nth-child(1) {
+				display: block;
+			}
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+doctype html
+html.no-js(lang='')
+	head
+		meta(charset='utf-8')
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title dashboard project
+		link(rel='apple-touch-icon', href='apple-touch-icon.png')
+		// Place favicon.ico in the root directory
+
+		link(href='https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700&display=swap', rel='stylesheet')
+		
+		// build:css styles/fd-style.css
+		link(rel='stylesheet', href='styles/fd-style.css')
+		// endbuild
+
+		// build:js scripts/modernizr.js
+		script(src='scripts/modernizr.js')
+		// endbuild
+		
+	body
+		//if IE
+			p.browserupgrade
+				| You are using an 
+				strong outdated
+				|  browser. Please 
+				a(href='http://browsehappy.com/') upgrade your browser
+				|  to improve your experience.
+		.main-wrapper
+			include ../includes/header
+			include ../includes/sidebar
+			include ../includes/subaside
+			main
+				.content
+					block content
+		// build:js scripts/vendor.js
+		script(type='text/javascript', src='/node_modules/jquery/dist/jquery.min.js')
+		// endbuild
+		// build:js scripts/main.js
+		script(src='scripts/main.js')
+		// endbuild

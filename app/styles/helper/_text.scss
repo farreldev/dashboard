@@ -1,0 +1,52 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font1;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 1.2;
+  color: $color-dark;
+}
+
+@for $i from 1 through $offset - 14 {
+  h#{1 * $i}.rr {
+    font-size: #{56 - (8 * ($i - 1))}px;
+  }
+}
+
+p, a, span, strong {
+  font-family: $font1;
+  font-size: 17px;
+  line-height: 1.8;
+  letter-spacing: .05px;
+}
+
+p {
+  position: relative;
+  &.rr {
+    &.large {
+      font-size: 24px;
+    }
+    &.semilarge {
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+    &.medium {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+    &.small {
+      font-size: 14px;
+    }
+    &.tiny {
+      font-size: 12px;
+    }
+    &.regular {
+      font-weight: 400;
+    }
+    &.semibold {
+      font-weight: 600;
+    }
+    &.bold {
+      font-weight: 700;
+    }
+  }
+}

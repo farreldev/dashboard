@@ -1,0 +1,20 @@
+span.badge {
+   position: absolute;
+   top: -11px;
+   right: -5px;
+   width: 13px;
+   height: 13px;
+   display: block;
+   text-align: center;
+   border-radius: 50%;
+   color: $color-light;
+   line-height: 25px;
+   font-size: 12px;
+   box-sizing: border-box;
+   font-weight: 600;
+   z-index: 3;
+   animation-duration: 1.8s;
+   animation-direction: alternate;
+   animation-iteration-count: infinite;
+   background-color: $color-yellow;
+}

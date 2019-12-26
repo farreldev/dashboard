@@ -1,0 +1,79 @@
+aside {
+   position: fixed;
+   top: 70px;
+   left: 0;
+   width: 70px;
+   height: calc(100vh - 70px);
+   z-index: 1;
+   background: rgb(125,43,106);
+   background: linear-gradient(180deg, $color-purple 0%, $color-dark-purple 100%);
+   box-shadow: 1px 0 10px rgba(0,0,0, .1);
+   .vertical-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 100%;
+      height: calc(100% - 70px);
+      &::-webkit-scrollbar { display: none; }
+      ul {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         li {
+            display: flex;
+            width: 70px;
+            height: 70px;
+            justify-content: center;
+            align-items: center;
+            a {
+               display: inline-block;
+               width: 20px;
+               svg {
+                  display: block;
+                  width: 100%;
+               }
+            }
+            &.active {
+               background-color: rgba(0,0,0, .22);
+               a {
+                  svg {
+                     path {
+                        fill: $color-light;
+                     }
+                  }
+               }
+            }
+            &:hover {
+               cursor: pointer;
+               a {
+                  svg {
+                     path {
+                        fill: $color-light;
+                     }
+                  }
+               }
+
+            }
+         }
+      }
+   }
+   a.logout {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      &:hover {
+         svg {
+            path {
+               fill: $color-light;
+            }
+         }
+      }
+   }
+}
